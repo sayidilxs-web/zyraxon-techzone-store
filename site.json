@@ -1,0 +1,45 @@
+{
+  "id": "premium-electronics-ms4oqa86",
+  "name": "premium-electronics",
+  "type": "ecommerce",
+  "template": "ecommerce",
+  "directory": "C:\\Users\\MMP\\.zyraxon\\websites\\premium-electronics-ms4oqa86",
+  "port": 3849,
+  "published": false,
+  "publishMethod": null,
+  "githubRepo": null,
+  "githubPagesUrl": null,
+  "customDomain": null,
+  "framework": "html",
+  "buildCommand": null,
+  "outputDir": null,
+  "created": "2026-07-28T13:21:57.330Z",
+  "updated": "2026-07-28T13:21:57.330Z",
+  "theme": {
+    "mode": "dark",
+    "primaryColor": "#3b82f6",
+    "secondaryColor": "#06b6d4",
+    "backgroundColor": "#0a0a0a",
+    "surfaceColor": "#1a1a1a",
+    "textColor": "#ffffff",
+    "mutedTextColor": "#a0a0a0",
+    "borderColor": "#2a2a2a",
+    "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+    "headingFont": "'Space Grotesk', 'Inter', sans-serif",
+    "borderRadius": "12px"
+  },
+  "media": {
+    "images": [],
+    "videos": [],
+    "audio": [],
+    "icons": []
+  },
+  "metadata": {
+    "title": "ByteShop - Premium Electronics",
+    "description": "Premium electronics store with real products",
+    "name": "ByteShop",
+    "subtitle": "Premium Electronics",
+    "email": "support@byteshop.com",
+    "location": "Dhaka, Bangladesh"
+  }
+}
