@@ -1,0 +1,45 @@
+{
+  "id": "techzone-store-ms42mvln",
+  "name": "techzone-store",
+  "type": "ecommerce",
+  "template": "ecommerce",
+  "directory": "C:\\Users\\MMP\\.zyraxon\\websites\\techzone-store-ms42mvln",
+  "port": 3848,
+  "published": false,
+  "publishMethod": null,
+  "githubRepo": null,
+  "githubPagesUrl": null,
+  "customDomain": null,
+  "framework": "html",
+  "buildCommand": null,
+  "outputDir": null,
+  "created": "2026-07-28T03:03:26.866Z",
+  "updated": "2026-07-28T03:03:26.866Z",
+  "theme": {
+    "mode": "dark",
+    "primaryColor": "#6366f1",
+    "secondaryColor": "#8b5cf6",
+    "backgroundColor": "#0a0a0a",
+    "surfaceColor": "#1a1a1a",
+    "textColor": "#ffffff",
+    "mutedTextColor": "#a0a0a0",
+    "borderColor": "#2a2a2a",
+    "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+    "headingFont": "'Space Grotesk', 'Inter', sans-serif",
+    "borderRadius": "12px"
+  },
+  "media": {
+    "images": [],
+    "videos": [],
+    "audio": [],
+    "icons": []
+  },
+  "metadata": {
+    "title": "TechZone - Premium Electronics Store",
+    "description": "Your one-stop shop for premium electronics, gadgets, and tech accessories",
+    "name": "TechZone Electronics",
+    "subtitle": "Premium Electronics & Gadgets",
+    "email": "support@techzone.com",
+    "location": "Dhaka, Bangladesh"
+  }
+}

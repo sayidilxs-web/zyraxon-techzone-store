@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechZone - Premium Electronics Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">
+        <div class="navbar-logo-icon">T</div>
+        <span class="navbar-logo-text">TechZone</span>
+      </a>
+      <ul class="navbar-nav">
+        <li><a href="#home">হোম</a></li>
+        <li><a href="#categories">ক্যাটাগরি</a></li>
+        <li><a href="#products">পণ্য</a></li>
+        <li><a href="#deals">অফার</a></li>
+        <li><a href="#reviews">রিভিউ</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="cart-btn" onclick="openCart()">
+          🛒 কার্ট
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg-orb hero-bg-orb-1"></div>
+    <div class="hero-bg-orb hero-bg-orb-2"></div>
+    <div class="hero-bg-orb hero-bg-orb-3"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          নতুন কালেকশন এসেছে!
+        </div>
+        <h1 class="hero-title">
+          আপনার পছন্দের<br>
+          <span class="hero-title-gradient">ইলেকট্রনিক্স</span><br>
+          এখন আরও সহজে
+        </h1>
+        <p class="hero-subtitle">
+          বাংলাদেশের সবচেয়ে বিশ্বস্ত ইলেকট্রনিক্স স্টোর। অরিজিনাল পণ্য, সেরা দাম, দ্রুত ডেলিভারি।
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" onclick="scrollTo('#products')">🛍️ এখনই কিনুন</button>
+          <button class="btn btn-secondary btn-lg" onclick="scrollTo('#deals')">🔥 অফার দেখুন</button>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hero-stat-value">৫০,০০০+</div><div class="hero-stat-label">সন্তুষ্ট গ্রাহক</div></div>
+          <div><div class="hero-stat-value">১০,০০০+</div><div class="hero-stat-label">পণ্য সমূহ</div></div>
+          <div><div class="hero-stat-value">৬৪ জেলা</div><div class="hero-stat-label">ডেলিভারি কভারেজ</div></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-product-card">
+          <div class="hero-product-emoji">📱</div>
+          <div class="hero-product-name">iPhone 15 Pro Max</div>
+          <div class="hero-product-price">৳১,৫৯,৯০০</div>
+        </div>
+        <div class="hero-floating-badge hero-floating-badge-1">
+          <div class="floating-badge-icon" style="background:rgba(16,185,129,0.2)">🚚</div>
+          <div><div class="floating-badge-text">ফ্রি ডেলিভারি</div><div class="floating-badge-sub">৫০০৳ এর উপরে</div></div>
+        </div>
+        <div class="hero-floating-badge hero-floating-badge-2">
+          <div class="floating-badge-icon" style="background:rgba(236,72,153,0.2)">🛡️</div>
+          <div><div class="floating-badge-text">১ বছর ওয়ারেন্টি</div><div class="floating-badge-sub">সব পণ্যে</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="section-header">
+      <div class="section-badge">📂 ক্যাটাগরি</div>
+      <h2 class="section-title">জনপ্রিয় ক্যাটাগরি</h2>
+      <p class="section-subtitle">আপনার পছন্দের ক্যাটাগরি থেকে সেরা পণ্য খুঁজে নিন</p>
+    </div>
+    <div class="categories-grid" id="categoriesGrid"></div>
+  </section>
+
+  <!-- Products -->
+  <section class="section" id="products">
+    <div class="section-header">
+      <div class="section-badge">🔥 ট্রেন্ডিং</div>
+      <h2 class="section-title">সর্বশেষ পণ্যসমূহ</h2>
+      <p class="section-subtitle">আমাদের সেরা কালেকশন থেকে পছন্দের পণ্য বাছাই করুন</p>
+    </div>
+    <div class="products-filter" id="productsFilter"></div>
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+  <!-- Deals Banner -->
+  <section id="deals">
+    <div class="deals-banner">
+      <div class="deals-content">
+        <div class="deals-tag">⏰ সীমিত সময়ের অফার!</div>
+        <h2 class="deals-title">ফ্ল্যাশ সেল — ৫০% পর্যন্ত ছাড়!</h2>
+        <p class="deals-desc">এই অফার শুধুমাত্র সীমিত সময়ের জন্য। আজই অর্ডার করুন!</p>
+        <div class="deals-timer">
+          <div class="timer-box"><div class="timer-value" id="timerH">23</div><div class="timer-label">ঘণ্টা</div></div>
+          <div class="timer-box"><div class="timer-value" id="timerM">45</div><div class="timer-label">মিনিট</div></div>
+          <div class="timer-box"><div class="timer-value" id="timerS">12</div><div class="timer-label">সেকেন্ড</div></div>
+        </div>
+      </div>
+      <div class="deals-visual">🔥</div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-badge">✨ আমাদের সুবিধা</div>
+      <h2 class="section-title">কেন TechZone বেছে নেবেন?</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card glass-card">
+        <div class="feature-icon">🚚</div>
+        <div class="feature-title">ফ্রি ডেলিভারি</div>
+        <div class="feature-desc">৫০০ টাকার উপরে অর্ডারে সম্পূর্ণ বিনামূল্যে ডেলিভারি</div>
+      </div>
+      <div class="feature-card glass-card">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-title">১ বছর ওয়ারেন্টি</div>
+        <div class="feature-desc">সব পণ্যে অফিসিয়াল ওয়ারেন্টি এবং গ্যারান্টি</div>
+      </div>
+      <div class="feature-card glass-card">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-title">নিরাপদ পেমেন্ট</div>
+        <div class="feature-desc">বিকাশ, নগদ, রকেট এবং সকল ব্যাংক কার্ড সাপোর্টেড</div>
+      </div>
+      <div class="feature-card glass-card">
+        <div class="feature-icon">💬</div>
+        <div class="feature-title">২৪/৭ সাপোর্ট</div>
+        <div class="feature-desc">যেকোনো সময় আমাদের টিমের সাথে কথা বলুন</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="reviews">
+    <div class="section-header">
+      <div class="section-badge">💬 রিভিউ</div>
+      <h2 class="section-title">গ্রাহকদের মতামত</h2>
+      <p class="section-subtitle">আমাদের গ্রাহকরা কী বলছেন</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card glass-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"অসাধারণ অভিজ্ঞতা! পণ্য একদম অরিজিনাল এবং ডেলিভারি দ্রুত পেয়েছি। TechZone সবসময় আমার প্রথম পছন্দ।"</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">👨‍💻</div>
+          <div><div class="testimonial-name">রাকিব হাসান</div><div class="testimonial-role">Tech Enthusiast</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card glass-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"গ্রাহক সেবা চমৎকার! পণ্য নিয়ে কোনো সমস্যা হলে তাৎক্ষণিক সমাধান দেয়। খুবই সন্তুষ্ট।"</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">👩‍🎨</div>
+          <div><div class="testimonial-name">নাফিসা আক্তার</div><div class="testimonial-role">Designer</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card glass-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"PlayStation এবং গেমিং এক্সেসরিজ সব TechZone থেকে কিনি। প্রাইসও ভালো, সার্ভিসও ভালো।"</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">🎮</div>
+          <div><div class="testimonial-name">তানভীর আহমেদ</div><div class="testimonial-role">Gamer</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-icon">✉️</div>
+    <h2 class="newsletter-title">নিউজলেটারে সাবস্ক্রাইব করুন</h2>
+    <p class="newsletter-desc">সর্বশেষ অফার এবং নতুন পণ্যের খবর পেতে আমাদের নিউজলেটারে যোগ দিন</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('সাবস্ক্রিপশন সফল হয়েছে!');">
+      <input class="newsletter-input" type="email" placeholder="আপনার ইমেইল লিখুন" required>
+      <button class="btn btn-primary" type="submit">সাবস্ক্রাইব</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="navbar-logo"><div class="navbar-logo-icon">T</div><span class="navbar-logo-text">TechZone</span></a>
+          <p class="footer-brand-desc">বাংলাদেশের সবচেয়ে বিশ্বস্ত ইলেকট্রনিক্স স্টোর। আমরা সরাসরি অথরাইজড ডিলারদের কাছ থেকে পণ্য সংগ্রহ করি।</p>
+          <div class="footer-social">
+            <div class="footer-social-btn">📘</div>
+            <div class="footer-social-btn">🐦</div>
+            <div class="footer-social-btn">📷</div>
+            <div class="footer-social-btn">▶️</div>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">দ্রুত লিঙ্ক</div>
+          <ul class="footer-links">
+            <li><a href="#">আমাদের সম্পর্কে</a></li>
+            <li><a href="#">যোগাযোগ</a></li>
+            <li><a href="#">ব্লগ</a></li>
+            <li><a href="#">ক্যারিয়ার</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">সাহায্য</div>
+          <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">শিপিং পলিসি</a></li>
+            <li><a href="#">রিটার্ন পলিসি</a></li>
+            <li><a href="#">প্রাইভেসি</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">যোগাযোগ</div>
+          <ul class="footer-links">
+            <li><a href="#">📍 ঢাকা, বাংলাদেশ</a></li>
+            <li><a href="#">📞 +880 1700-000000</a></li>
+            <li><a href="#">✉️ support@techzone.com</a></li>
+            <li><a href="#">🕐 সকাল ৯টা - রাত ১০টা</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">© 2026 TechZone Electronics. সর্বস্বত্ব সংরক্ষিত।</div>
+        <div class="footer-payments">
+          <div class="payment-icon">bKash</div>
+          <div class="payment-icon">Nagad</div>
+          <div class="payment-icon">VISA</div>
+          <div class="payment-icon">MC</div>
+          <div class="payment-icon">Rocket</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <div class="cart-title">🛒 আপনার কার্ট (<span id="cartCountText">0</span>)</div>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <div class="cart-empty-icon">🛒</div>
+        <div class="cart-empty-text">আপনার কার্ট খালি!</div>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span class="cart-total-label">মোট মূল্য:</span>
+        <span class="cart-total-value" id="cartTotal">৳০</span>
+      </div>
+      <button class="cart-checkout" onclick="checkout()">💳 চেকআউট করুন</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
